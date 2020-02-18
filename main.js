@@ -235,14 +235,16 @@ class GoodItemCart {
 let URL_catalog = 'https://raw.githubusercontent.com/HelloAleno4ka/js2_12_0502/master/catalogData.json'
 let URL_cart = 'https://raw.githubusercontent.com/HelloAleno4ka/js2_12_0502/master/get.Basket.json'
 
-        function makeGETRequest(url, resolve, reject) {
+        function makeGETRequest(url) {
             let xhr = new XMLHttpRequest()
 
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
                     if (xhr.status === 200) {
                         resolve (xhr.responseText)
-                    } 
+                    } else {
+                        reject ('error')
+                    }
                 }
             }
 
@@ -252,25 +254,25 @@ let URL_cart = 'https://raw.githubusercontent.com/HelloAleno4ka/js2_12_0502/mast
 
 
         function promiseReq (url) {
-            return new Promise ((res, rej) => {
-                makeGETRequest(url, res, rej)
+            return new Promise ((resolve, reject) => {
+                makeGETRequest(url, resolve, reject)
             })
         }
 
         promiseReq (URL)
             .then (dataJSON => {
-                console.log (dataJSON) // String
-                console.log (a) // []
+                console.log (dataJSON) 
+                console.log (a) 
                 return JSON.parse(dataJSON)
             })
             .then (dataParsedFromJSON => {
-                console.log (dataParsedFromJSON) //Object/Array
+                console.log (dataParsedFromJSON) 
                 a = dataParsedFromJSON
             })
             .catch (errorData => {
                 console.log (errorData + ' ERROR')
             })
             .finally (() => {
-                console.log (a) // catch+ -> [] / -catch -> [{}, {}]
+                console.log (a) 
             })
             
