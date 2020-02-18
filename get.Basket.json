@@ -3,15 +3,21 @@
     "countGoods": 2,
     "contents": [
       {
-        "id_product": 123,
-        "product_name": "Ноутбук",
-        "price": 45600,
+        "id_product": 1,
+        "product_name": "Apple",
+        "price": 500,
         "quantity": 1
       },
       {
-        "id_product": 456,
-        "product_name": "Мышка",
-        "price": 1000,
+        "id_product": 2,
+        "product_name": "Huawei",
+        "price": 400,
+        "quantity": 1
+      },
+      {
+        "id_product": 3,
+        "product_name": "LeEco",
+        "price": 300,
         "quantity": 1
       }
     ]
