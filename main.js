@@ -76,10 +76,6 @@ function renderProducts () {
     document.querySelector('.products').innerHTML = arr.join();
 }
 
-
-
-
-
 function init () {
     console.log ('init start')
     list = fetchData ();
@@ -143,10 +139,6 @@ function renderCart () {
 
     document.querySelector(`.cart-block`).innerHTML = allProducts;
 }
-
-
-
-
 
 
 //классы
