@@ -238,31 +238,19 @@ class GoodItemCart {
     }
 }
 
-
-
 //makeGETRequest() с использованием промиса
 
-//let makeGETRequest = (url) => {
-//    return new Promise((resolve, reject ) => {
-//        let xhr = new XMLHttpRequest()
-//
-//    })
-//}
-
-
-let a = []
+let URL_catalog = 'https://raw.githubusercontent.com/HelloAleno4ka/js2_12_0502/master/catalogData.json'
+let URL_cart = 'https://raw.githubusercontent.com/HelloAleno4ka/js2_12_0502/master/get.Basket.json'
 
         function makeGETRequest(url, resolve, reject) {
             let xhr = new XMLHttpRequest()
 
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
-                //callback(xhr.responseText); //то, что должно быть ПОСЛЕ окончания асинх запроса
                     if (xhr.status === 200) {
                         resolve (xhr.responseText)
-                    } else {
-                        reject ('error')
-                    }
+                    } 
                 }
             }
 
@@ -293,6 +281,4 @@ let a = []
             .finally (() => {
                 console.log (a) // catch+ -> [] / -catch -> [{}, {}]
             })
-
-
             
