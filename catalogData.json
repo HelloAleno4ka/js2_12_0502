@@ -1,0 +1,27 @@
+[
+    {
+      "id_product": 1,
+      "product_name": "Apple",
+      "price": 500
+    },
+    {
+      "id_product": 2,
+      "product_name": "Huawei",
+      "price": 400
+    },
+    {
+        "id_product": 3,
+        "product_name": "LeEco",
+        "price": 300
+      },
+      {
+        "id_product": 4,
+        "product_name": "Lenovo",
+        "price": 200
+      },
+      {
+        "id_product": 5,
+        "product_name": "Meizu",
+        "price": 100
+      }
+  ]
